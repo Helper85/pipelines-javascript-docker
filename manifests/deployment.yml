@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: helperpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helperpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: helperpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: helperpipelinesjavascriptdocker 
+          image: jonghocontainer.azurecr.io/helperpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
